@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class KabKo extends Model
 {
+    protected $table = 'kabko';
     public $timestamps = false;
 
     protected $fillable = [
