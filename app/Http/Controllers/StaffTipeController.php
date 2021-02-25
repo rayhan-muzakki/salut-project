@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\StaffTipe;
 
 class StaffTipeController extends Controller
 {
     public function showAllStaffTipe()
     {
-        return response()->json(staff_tipe::all());
+        return response()->json(StaffTipe::all());
     }
 
     public function showOneStaffTipe($id)
     {
-        return response()->json(staff_tipe::find($id));
+        return response()->json(StaffTipe::find($id));
     }
 
     public function create(Request $request)
@@ -22,14 +23,14 @@ class StaffTipeController extends Controller
             'name' => 'required',
         ]);
 
-        $staff_tipe = staff_tipe::create($request->all());
+        $staff_tipe = StaffTipe::create($request->all());
 
         return response()->json($staff_tipe, 201);
     }
 
     public function update($id, Request $request)
     {
-        $staff_tipe = staff_tipe::findOrFail($id);
+        $staff_tipe = StaffTipe::findOrFail($id);
         $staff_tipe->update($request->all());
 
         return response()->json($staff_tipe, 200);
@@ -37,7 +38,7 @@ class StaffTipeController extends Controller
 
     public function delete($id)
     {
-        staff_tipe::findOrFail($id)->delete();
+        StaffTipe::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
 }

@@ -9,12 +9,12 @@ class KabKoController extends Controller
 {
     public function showAllKabko()
     {
-        return response()->json(kabko::all());
+        return response()->json(KabKo::all());
     }
 
     public function showOneKabko($id)
     {
-        return response()->json(kabko::find($id));
+        return response()->json(KabKo::find($id));
     }
 
     public function create(Request $request)
@@ -24,14 +24,14 @@ class KabKoController extends Controller
             'kode' => 'required'
         ]);
 
-        $kabko = kabko::create($request->all());
+        $kabko = KabKo::create($request->all());
 
         return response()->json($kabko, 201);
     }
 
     public function update($id, Request $request)
     {
-        $kabko = kabko::findOrFail($id);
+        $kabko = KabKo::findOrFail($id);
         $kabko->update($request->all());
 
         return response()->json($kabko, 200);
@@ -39,7 +39,7 @@ class KabKoController extends Controller
 
     public function delete($id)
     {
-        kabko::findOrFail($id)->delete();
+        KabKo::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
 }
