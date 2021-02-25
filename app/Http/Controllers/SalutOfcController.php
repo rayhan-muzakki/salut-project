@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SalutOfc;
+use salut_ofc;
 
 class SalutOfcController extends Controller
 {
