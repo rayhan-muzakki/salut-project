@@ -14,7 +14,7 @@ class SalutOfcController extends Controller
 
     public function showOneOffice($id)
     {
-        return response()->json(salut_ofc::find($id));
+        return response()->json(SalutOfc::find($id));
     }
 
     public function create(Request $request)
@@ -23,14 +23,14 @@ class SalutOfcController extends Controller
             'name' => 'required',
         ]);
 
-        $office = salut_ofc::create($request->all());
+        $office = SalutOfc::create($request->all());
 
         return response()->json($office, 201);
     }
 
     public function update($id, Request $request)
     {
-        $office = salut_ofc::findOrFail($id);
+        $office = SalutOfc::findOrFail($id);
         $office->update($request->all());
 
         return response()->json($office, 200);
@@ -38,7 +38,7 @@ class SalutOfcController extends Controller
 
     public function delete($id)
     {
-        salut_ofc::findOrFail($id)->delete();
+        SalutOfc::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
 }
