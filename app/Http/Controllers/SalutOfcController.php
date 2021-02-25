@@ -4,13 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SalutOfc;
-use salut_ofc;
 
 class SalutOfcController extends Controller
 {
     public function showAllOffices()
     {
-        return response()->json(salut_ofc::all());
+        return response()->json(SalutOfc::all());
     }
 
     public function showOneOffice($id)
