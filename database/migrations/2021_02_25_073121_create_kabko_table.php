@@ -17,7 +17,7 @@ class CreateKabkoTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('kode')->unique();
-            $table->int('prov_id')->unique();
+            $table->integer('prov_id')->unique();
         });
     }
 
