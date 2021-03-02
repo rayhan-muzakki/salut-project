@@ -4,14 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SalutOfc extends Model
+class Minat extends Model
 {
-    protected $table = 'salut_ofc';
-
+    protected $table = 'minat';
     public $timestamps = false;
 
     protected $fillable = [
-        'name','tipe','kabko_id','alamat'
+        'name','email','hp'
     ];
 
     protected $hidden = [];

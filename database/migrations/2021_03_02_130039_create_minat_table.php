@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSalutOfcTable extends Migration
+class CreateMinatTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateSalutOfcTable extends Migration
      */
     public function up()
     {
-        Schema::create('salut_ofc', function (Blueprint $table) {
-            $table->id();
+        Schema::create('minat', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('name')->unique();
-            $table->string('tipe');
-            $table->integer('kabko_id')->unique();
-            $table->longText('alamat');
+            $table->string('email')->unique();
+            $table->string('hp');
         });
     }
 
@@ -29,6 +28,6 @@ class CreateSalutOfcTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('salut_ofc');
+        Schema::dropIfExists('minat');
     }
 }

@@ -49,5 +49,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('stafftipe/{id}', ['uses' => 'StaffTipeController@delete']);
     $router->put('stafftipe/{id}', ['uses' => 'StaffTipeController@update']);
     
+    $router->get('minat',  ['uses' => 'MinatController@showAllMinat']);
+    $router->get('minat/{id}', ['uses' => 'MinatController@showOneMinat']);
+    $router->post('minat', ['uses' => 'MinatController@create']);
+    $router->delete('minat/{id}', ['uses' => 'MinatController@delete']);
+    $router->put('minat/{id}', ['uses' => 'MinatController@update']);
   });
 
