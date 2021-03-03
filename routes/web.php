@@ -54,5 +54,23 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->post('minat', ['uses' => 'MinatController@create']);
     $router->delete('minat/{id}', ['uses' => 'MinatController@delete']);
     $router->put('minat/{id}', ['uses' => 'MinatController@update']);
+
+    $router->get('upbjj',  ['uses' => 'UpbjjController@showAllUpbjj']);
+    $router->get('upbjj/{id}', ['uses' => 'UpbjjController@showOneUpbjj']);
+
+    $router->get('lipstate',  ['uses' => 'LipStateController@showAllLipstate']);
+    $router->get('lipstate/{id}', ['uses' => 'LipStateController@showOneLipstate']);
+
+    $router->get('mbrstate',  ['uses' => 'MbrStateController@showAllMbrstate']);
+    $router->get('mbrstate/{id}', ['uses' => 'MbrStateController@showOneMbrstate']);
+
+    $router->get('prodi',  ['uses' => 'ProdiController@showAllProdi']);
+    $router->get('prodi/{id}', ['uses' => 'ProdiController@showOneProdi']);
+
+    $router->get('matkul',  ['uses' => 'MatkulController@showAllMatkul']);
+    $router->get('matkul/{id}', ['uses' => 'MatkulController@showOneMatkul']);
+
+    $router->get('masaregistrasi',  ['uses' => 'MasaRegistrasiController@showAllMasaRegistrasi']);
+    $router->get('masaregistrasi/{id}', ['uses' => 'MasaRegistrasiController@showOneMasaRegistrasi']);
   });
 
