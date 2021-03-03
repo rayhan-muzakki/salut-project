@@ -12,9 +12,9 @@ class StaffController extends Controller
         return response()->json(Staff::all());
     }
 
-    public function showOneStaff($id,$name)
+    public function showOneStaff($id)
     {
-        return response()->json(Staff::find('id LIKE :id AND name LIKE :name'));
+        return response()->json(Staff::find($id);
     }
 
     public function create(Request $request)
