@@ -14,7 +14,7 @@ class StaffController extends Controller
 
     public function showOneStaff($id)
     {
-        return response()->json(Staff::find($id);
+        return response()->json(Staff::find($id));
     }
 
     public function create(Request $request)
