@@ -12,9 +12,14 @@ class StaffController extends Controller
         return response()->json(Staff::all());
     }
 
-    public function showOneStaff($id)
+    public function showOneStaffId($id)
     {
         return response()->json(Staff::find($id));
+    }
+
+    public function showOneStaffName($name)
+    {
+        return response()->json(Staff::find($name));
     }
 
     public function create(Request $request)

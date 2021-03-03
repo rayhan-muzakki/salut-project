@@ -20,10 +20,11 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->get('staff',  ['uses' => 'StaffController@showAllStaffs']);
-    $router->get('staff/{id}', ['uses' => 'StaffController@showOneStaff']);
+    $router->get('staff/{id}', ['uses' => 'StaffController@showOneStaffId']);
     $router->post('staff', ['uses' => 'StaffController@create']);
     $router->delete('staff/{id}', ['uses' => 'StaffController@delete']);
     $router->put('staff/{id}', ['uses' => 'StaffController@update']);
+    $router->get('staff/{name}', ['uses' => 'StaffController@showOneStaffName']);
 
     $router->get('salutofc',  ['uses' => 'SalutOfcController@showAllOffices']);
     $router->get('salutofc/{id}', ['uses' => 'SalutOfcController@showOneOffice']);
