@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\minat;
 
 use Illuminate\Http\Request;
 
