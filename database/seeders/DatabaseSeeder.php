@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
             LipstateSeeder::class,
             MasaregistrasiSeeder::class,
             MbrstateSeeder::class,
+        ]);
     }
 }
