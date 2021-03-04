@@ -14,7 +14,7 @@ class MbrstateSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("lipstate")->insert([
+        DB::table("mbrstate")->insert([
             [
                 'name'=> 'Camaba',
             ],

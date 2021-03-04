@@ -14,7 +14,7 @@ class MasaregistrasiSeeder extends Seeder
      */
     public function run()
     {
-        DB::table("lipstate")->insert([
+        DB::table("masaregistrasi")->insert([
             [
                 'name'=> '2021.1',
             ],
