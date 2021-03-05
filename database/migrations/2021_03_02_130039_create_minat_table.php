@@ -18,6 +18,15 @@ class CreateMinatTable extends Migration
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->string('hp');
+            $table->integer('masaregistrasi_id');
+            $table->integer('salut_ofc_id');
+            $table->string('kanal');
+            $table->string('area_kanal');
+            $table->date('tanggal');
+
+
+
+
         });
     }
 
