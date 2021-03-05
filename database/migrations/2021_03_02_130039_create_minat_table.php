@@ -23,7 +23,7 @@ class CreateMinatTable extends Migration
             $table->string('kanal');
             $table->string('area_kanal');
             $table->date('tanggal');
-
+            $table->integer('prodi_id');
 
 
 

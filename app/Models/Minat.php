@@ -14,7 +14,7 @@ class Minat extends Model
     }
 
     protected $fillable = [
-        'name','email','hp',"masaregistrasi_id",'salut_ofc_id','kanal','area_kanal','tanggal'
+        'name','email','hp',"masaregistrasi_id",'salut_ofc_id','kanal','area_kanal','tanggal','prodi_id'
     ];
 
     protected $hidden = [];
